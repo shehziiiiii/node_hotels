@@ -103,4 +103,6 @@ router.delete('/:id',async(req,res)=>{
 
 })
 
+// person routes
+
 module.exports=router;
