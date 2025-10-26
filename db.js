@@ -1,5 +1,22 @@
 const mongoose=require('mongoose');   // export Mongoose Here
-const mongoUrl='mongodb://localhost:27017/hotels'   // connectivity and db name
+
+require('dotenv').config();
+// const mongoUrl='mongodb://localhost:27017/hotels'   // connectivity and db name
+
+// const mongoUrl = "mongodb+srv://shahzadalibaloch543_db_user:Shahzad123@cluster0.lrdv3wr.mongodb.net/test?retryWrites=true&w=majority";
+
+// const mongoUrl=process.env.mongoDb_url;
+
+const mongoUrl=process.env.MongoDB_url;
+
+
+
+
+
+
+
+
+
 
 mongoose.connect(mongoUrl,{  // here we connect to the mongodb
     useNewUrlParser:true,

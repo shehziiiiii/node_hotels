@@ -2,11 +2,14 @@ const express=require('express');
 const app=express();
 const db=require('./db')      // first read the db file then connection will be successful
 const person=require('./models/person')  // export person module here
+require('dotenv').config();
 
 
 
 const bodyparser=require('body-parser');
 app.use(bodyparser.json())
+
+const port=process.env.port || 3000;
 
 
 const personroutes=require('./Routes/personroute');
@@ -14,8 +17,12 @@ const menuitemroutes=require('./Routes/menuitemroutes')
 app.use('/menu',menuitemroutes);
 app.use('/person',personroutes);
 
+// port number
 
-app.listen(3000,()=>{
+
+
+
+app.listen(port,()=>{
     console.log('succesfully Connected on port 3000');
 
 })
